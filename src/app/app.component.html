@@ -1,0 +1,57 @@
+<div class="container">
+  <header class="header">
+    <h1 style="font-size: 4em; font-weight: 900; text-align: center;">Real Madrid</h1>
+    <nav class="nav">
+      <ul class="menu" id="menu" style="list-style: none; display: flex; margin: 1em;">
+        <li><a href="#">Inicio</a></li>&nbsp;&nbsp;
+        <li><a href="#">Equipo</a></li>&nbsp;&nbsp;
+        <li><a href="#">Estadio</a></li>&nbsp;&nbsp;
+        <li><a href="#">Tecnicos</a></li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </ul>
+    </nav>
+  </header>
+  <main class="main">
+    <aside>
+      <h2>Historia</h2>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates ratione voluptatem vel. Cum illum
+      aliquid eius odio placeat fugit consequatur saepe maxime fuga. Libero molestias quasi repellat modi et
+      voluptatem.
+
+      <iframe width="1097" height="617" src="https://www.youtube.com/embed/-XYAslKVLgY"
+        title="REAL MADRID | El nuevo BERNABÉU está en camino | Diario AS" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+
+      <audio src="../assets/audio/audio.mp3" controls> este es un elemento de audio no soportado por tu navegador,
+        prueba con otro </audio>
+    </aside>
+    <section>
+      <h2>Presidencia</h2>
+      <div style="display: flex; gap: 2em;">
+        <img src="../assets/img/floren.jpeg" alt="floren" title="Floren">
+        <article>
+          Florentino Pérez Rodríguez es un empresario, ingeniero, dirigente deportivo y expolítico español. Es el presidente del grupo ACS desde 1997 y del Real Madrid Club de Fútbol, en un segundo mandato, desde 2009. Además, es patrono del Teatro Real​ y de la Fundación de Ingenieros de Caminos, Canales y Puertos
+        </article>
+      </div>
+    </section>
+
+    <hr>
+
+    <h3 style="text-align: center">Equipo </h3>
+    <div style="display: flex; justify-content: space-between; width: 80%; gap: 1em;">
+      <div *ngFor="let persona of infoService.equipo">
+        <img [src]="persona.imagen" alt="" width="400">
+        <h5>{{ persona.nom }}</h5>
+        <p>{{ persona.titol }}</p>
+        <p>{{ persona.frase }}</p>
+        <a href="https://twitter/{{persona.twitter}}">{{ persona.twitter }}</a>
+      </div>
+    </div>
+  </main>
+  <footer>
+    Redes sociales
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident recusandae voluptatum quos repellendus, soluta
+    nostrum, esse quis quibusdam, molestiae eveniet quae. Quidem saepe, quisquam adipisci nemo deleniti blanditiis earum
+    debitis.
+  </footer>
+</div>
